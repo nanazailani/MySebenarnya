@@ -13,6 +13,8 @@ return new class extends Migration {
             $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->string('password');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
             $table->enum('role', ['public', 'agency', 'mcmc', 'admin']);
             $table->string('agency_type')->nullable();
             $table->boolean('first_time_login')->default(true);

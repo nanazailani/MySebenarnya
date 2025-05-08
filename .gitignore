@@ -21,3 +21,14 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+# macOS system files
+.DS_Store
+
+# Laravel specific
+/vendor
+/node_modules
+.env
+/storage/*.key
+/public/storage
+/database/database.sqlite
+
