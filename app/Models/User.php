@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -33,11 +34,28 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function inquiries()
+    {
+        return $this->hasMany(Inquiry::class);
+    }
+
+    public function inquiryAssignments()
+    {
+        return $this->hasMany(InquiryAssignment::class);
+    }
+
+    public function inquiryProgresses()
+    {
+        return $this->hasMany(InquiryProgress::class);
+    }
+
+
     /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
      */
+
     protected function casts(): array
     {
         return [

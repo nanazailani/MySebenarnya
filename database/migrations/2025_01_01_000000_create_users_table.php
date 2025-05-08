@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
-            $table->enum('role', ['public', 'agency', 'mcmc', 'admin']);
+            $table->string('role')->default('user');
             $table->string('agency_type')->nullable();
             $table->boolean('first_time_login')->default(true);
             $table->enum('status', ['Active', 'Inactive'])->default('Active');
