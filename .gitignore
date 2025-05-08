@@ -22,6 +22,7 @@ yarn-error.log
 /.vscode
 /.zed
 # macOS system files
+
 .DS_Store
 
 # Laravel specific
